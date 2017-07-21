@@ -11,7 +11,7 @@ module SystemDependencies
 
       gems.map do |gem|
         name = gem[1][0].name
-        version = gem[1][0].version.as_json['version']
+        version = gem[1][0].version.to_s
 
         packages << { name: name, version: version }
       end
@@ -19,7 +19,7 @@ module SystemDependencies
       packages
     end
 
-    def system_dependencies ## Gets all the applications accessible by this person
+    def self.system_dependencies ## Gets all the applications accessible by this person
       url = '/api/lookups/package_system_dependencies'
 
       body = {
