@@ -1,3 +1,5 @@
+# frozen_string_literal: true
+
 describe 'test one' do
   context 'first test' do
     it 'is a test' do

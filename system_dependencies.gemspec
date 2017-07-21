@@ -1,4 +1,5 @@
 # coding: utf-8
+# frozen_string_literal: true
 
 lib = File.expand_path('../lib', __FILE__)
 $LOAD_PATH.unshift(lib) unless $LOAD_PATH.include?(lib)
@@ -10,8 +11,8 @@ Gem::Specification.new do |spec|
   spec.authors       = ['abdomazzika']
   spec.email         = ['newmazzikastyle@gmail.com']
 
-  spec.summary       = %q{detect the sytem level libraries needed for gem's installation}
-  spec.description   = %q{gathering all local gem's and send them to service which reply by the array of system libraries needed for installation}
+  spec.summary       = "detect the sytem level libraries needed for gem's installation"
+  spec.description   = "gathering all local gem's and send them to service which reply by the array of system libraries needed for installation"
   spec.homepage      = 'https://github.com/abdomazzika/system_dependencies'
 
   # Prevent pushing this gem to RubyGems.org. To allow pushes either set the 'allowed_push_host'
@@ -36,4 +37,6 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'guard'
   spec.add_development_dependency 'guard-rspec'
   spec.add_development_dependency 'coveralls'
+  spec.add_development_dependency 'typhoeus'
+  spec.add_development_dependency 'rubocop-git'
 end
