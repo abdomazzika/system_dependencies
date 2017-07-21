@@ -37,7 +37,7 @@ module SystemDependencies
       []
     end
 
-    def call_api(method, opts)
+    def self.call_api(method, opts)
       url     = opts[:url]
       body    = opts[:body]    || {}
       headers = opts[:headers] || {}

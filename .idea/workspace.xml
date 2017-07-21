@@ -2,7 +2,6 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="aeb6df74-f629-4eba-8017-4d208e713471" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/lib/system_dependencies.rb" afterPath="$PROJECT_DIR$/lib/system_dependencies.rb" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -18,8 +17,8 @@
       <file leaf-file-name="system_dependencies.rb" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/lib/system_dependencies.rb">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="140">
-              <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
+            <state relative-caret-position="120">
+              <caret line="6" column="11" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="60" selection-end-column="3" />
               <folding />
             </state>
           </provider>
@@ -118,7 +117,7 @@
   </component>
   <component name="PropertiesComponent">
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../packages-system-dependencies" />
   </component>
   <component name="RunDashboard">
     <option name="ruleStates">
@@ -289,12 +288,12 @@
       <option name="presentableId" value="Default" />
       <updated>1500642835167</updated>
       <workItem from="1500642836821" duration="10264000" />
-      <workItem from="1500660302520" duration="2541000" />
+      <workItem from="1500660302520" duration="3439000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="12805000" />
+    <option name="totallyTimeSpent" value="13703000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="27" width="1366" height="741" extended-state="6" />
@@ -397,8 +396,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/lib/system_dependencies.rb">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="140">
-          <caret line="7" column="4" lean-forward="true" selection-start-line="7" selection-start-column="4" selection-end-line="19" selection-end-column="7" />
+        <state relative-caret-position="120">
+          <caret line="6" column="11" lean-forward="false" selection-start-line="5" selection-start-column="0" selection-end-line="60" selection-end-column="3" />
           <folding />
         </state>
       </provider>
