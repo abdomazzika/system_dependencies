@@ -1,9 +1,8 @@
 # frozen_string_literal: true
 
-describe 'test one' do
+describe SystemDependencies::SystemLibraries do
   context 'first test' do
     it 'is a test' do
-      expect(1).to eql(1)
     end
   end
 end
