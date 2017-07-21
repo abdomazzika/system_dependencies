@@ -1,30 +1,52 @@
 [![Build Status](https://travis-ci.org/abdomazzika/system_dependencies.svg?branch=master)](https://travis-ci.org/abdomazzika/system_dependencies)  [![Coverage Status](https://coveralls.io/repos/github/abdomazzika/system_dependencies/badge.svg?branch=master)](https://coveralls.io/github/abdomazzika/system_dependencies?branch=master)
 # SystemDependencies
 
-Welcome to your new gem! In this directory, you'll find the files you need to be able to package up your Ruby library into a gem. Put your Ruby code in the file `lib/system_dependencies`. To experiment with that code, run `bin/console` for an interactive prompt.
-
-TODO: Delete this and the text above, and describe your gem
+Ruby gem that would collect all local gems in your project and send them to a web server 
+to determine the system libraries you need to install.
 
 ## Installation
 
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'system_dependencies'
+gem 'system_dependencies', :git => "git://github.com/abdomazzika/system_dependencies.git"
 ```
 
 And then execute:
 
     $ bundle
 
-Or install it yourself as:
-
-    $ gem install system_dependencies
-
 ## Usage
 
-TODO: Write usage instructions here
+you can list all your local gems using:
 
+```ruby
+SystemDependencies::SystemLibraries.local_gems
+```
+
+Also you can retrieve a list of all your local gems system level libraries dependencies
+and package manager needed to install them using:
+
+```ruby
+SystemDependencies::SystemLibraries.system_dependencies
+```
+
+## Configurations
+
+This gem configured with Travis-CI to run all tests and improving the development cycle
+you can find the travis-ci configuration in:
+
+```
+.travis.yml
+```
+
+And also configured with coverall to check the percentage of your specs code coverage
+you can find the coveralls configuration in:
+ 
+```
+.coveralls.yml
+```
+ 
 ## Development
 
 After checking out the repo, run `bin/setup` to install dependencies. You can also run `bin/console` for an interactive prompt that will allow you to experiment.
