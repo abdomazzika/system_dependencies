@@ -39,4 +39,5 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'coveralls'
   spec.add_development_dependency 'typhoeus'
   spec.add_development_dependency 'rubocop-git'
+  spec.add_development_dependency 'os'
 end

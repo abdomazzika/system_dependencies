@@ -2,6 +2,7 @@
 
 require 'system_dependencies/version'
 require 'rubygems'
+require 'os'
 
 module SystemDependencies
   class SystemLibraries
