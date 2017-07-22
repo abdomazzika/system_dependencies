@@ -2,6 +2,7 @@
 
 require 'system_dependencies/version'
 require 'rubygems'
+require 'os'
 
 module SystemDependencies
   class SystemLibraries
@@ -26,7 +27,7 @@ module SystemDependencies
 
       report = OS.report.delete(':').split
       report.each_index do |i|
-        next unless %q(target_os target_vendor).include?report[i]
+        next unless 'target_os target_vendor'.include? report[i]
 
         name = report[i + 1] if report[i] == 'target_os'
         vendor = report[i + 1] if report[i] == 'target_vendor'

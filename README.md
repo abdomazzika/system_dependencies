@@ -23,6 +23,11 @@ you can list all your local gems using:
 ```ruby
 SystemDependencies::SystemLibraries.local_gems
 ```
+you can list all your operating system info using:
+
+```ruby
+SystemDependencies::SystemLibraries.operating_system_info
+```
 
 Also you can retrieve a list of all your local gems system level libraries dependencies
 and package manager needed to install them using:
