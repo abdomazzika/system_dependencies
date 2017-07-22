@@ -19,13 +19,29 @@ module SystemDependencies
       packages
     end
 
+    def self.operating_system_info
+      bits = OS.bits
+      name = ''
+      vendor = ''
+
+      report = OS.report.delete(':').split
+      report.each_index do |i|
+        next unless %q(target_os target_vendor).include?report[i]
+
+        name = report[i + 1] if report[i] == 'target_os'
+        vendor = report[i + 1] if report[i] == 'target_vendor'
+      end
+
+      { name: name, vendor: vendor, bits: bits }
+    end
+
     def self.system_dependencies ## Gets all the applications accessible by this person
       url = '/api/lookups/package_system_dependencies'
 
       body = {
         lookup: {
           packages: local_gems,
-          operating_system: { name: 'fedora', edition: '26' },
+          operating_system: operating_system_info,
         },
       }.to_json
 
