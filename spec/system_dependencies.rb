@@ -1,6 +1,8 @@
 # frozen_string_literal: true
 
-describe SystemDependencies::Libraries do
+require 'spec_helper'
+
+describe SystemDependencies do
   context 'first test' do
     it 'is a test' do
     end
