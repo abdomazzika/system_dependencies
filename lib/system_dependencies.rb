@@ -5,7 +5,14 @@ require 'rubygems'
 require 'os'
 
 module SystemDependencies
-  class SystemLibraries
+  class Libraries
+    DEPENDENCIES_SERVICE_URL = '/api/lookups/package_system_dependencies'
+
+    def initialize(api_root, api_port)
+      @api_root = api_root
+      @api_port = api_port
+    end
+
     def self.local_gems
       packages = []
       gems = Gem::Specification.sort_by { |g| [g.name.downcase, g.version] }.group_by(&:name)
@@ -36,9 +43,7 @@ module SystemDependencies
       { name: name, vendor: vendor, bits: bits }
     end
 
-    def self.system_dependencies ## Gets all the applications accessible by this person
-      url = '/api/lookups/package_system_dependencies'
-
+    def self.system_dependencies
       body = {
         lookup: {
           packages: local_gems,
@@ -47,7 +52,9 @@ module SystemDependencies
       }.to_json
 
       response = call_api('post',
-                          url: url, body: body, headers: { 'Content-Type' => 'application/json' },)
+                          url: DEPENDENCIES_SERVICE_URL,
+                          body: body,
+                          headers: { 'Content-Type' => 'application/json' },)
 
       return JSON.parse(response.body).deep_symbolize_keys if response.success?
 
@@ -60,10 +67,7 @@ module SystemDependencies
       headers = opts[:headers] || {}
       params  = opts[:params]  || {}
 
-      api_root = 'localhost'
-      api_port = '3000'
-
-      fullpath = "#{api_root}:#{api_port}#{url}"
+      fullpath = "#{@api_root}:#{@api_port}#{url}"
 
       request = Typhoeus::Request.new(
         fullpath,
