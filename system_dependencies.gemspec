@@ -40,4 +40,7 @@ Gem::Specification.new do |spec|
   spec.add_development_dependency 'typhoeus'
   spec.add_development_dependency 'rubocop-git'
   spec.add_development_dependency 'os'
+
+  spec.add_runtime_dependency 'os'
+  spec.add_runtime_dependency 'typhoeus'
 end

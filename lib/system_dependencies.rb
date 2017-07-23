@@ -13,7 +13,7 @@ module SystemDependencies
       @api_port = api_port
     end
 
-    def self.local_gems
+    def local_gems
       packages = []
       gems = Gem::Specification.sort_by { |g| [g.name.downcase, g.version] }.group_by(&:name)
 
@@ -27,7 +27,7 @@ module SystemDependencies
       packages
     end
 
-    def self.operating_system_info
+    def operating_system_info
       bits = OS.bits
       name = ''
       vendor = ''
@@ -43,7 +43,7 @@ module SystemDependencies
       { name: name, vendor: vendor, bits: bits }
     end
 
-    def self.system_dependencies
+    def system_dependencies
       body = {
         lookup: {
           packages: local_gems,
@@ -61,7 +61,9 @@ module SystemDependencies
       []
     end
 
-    def self.call_api(method, opts)
+    private
+
+    def call_api(method, opts)
       url     = opts[:url]
       body    = opts[:body]    || {}
       headers = opts[:headers] || {}
