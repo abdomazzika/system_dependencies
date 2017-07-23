@@ -21,7 +21,7 @@ And then execute:
 First you need to pass dependencies service api port and root to gem using:
  
 ```ruby
-@my_app = SystemDependencies::Libraries.new('localhost', '3001')
+@my_app = SystemDependencies::Libraries.new('localhost', '3000')
 ```
 
 you can list all your local gems using:
