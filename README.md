@@ -18,22 +18,28 @@ And then execute:
 
 ## Usage
 
+First you need to pass dependencies service api port and root to gem using:
+ 
+```ruby
+@my_app = SystemDependencies::Libraries.new('localhost', '3001')
+```
+
 you can list all your local gems using:
 
 ```ruby
-SystemDependencies::SystemLibraries.local_gems
+@my_app.local_gems
 ```
 you can list all your operating system info using:
 
 ```ruby
-SystemDependencies::SystemLibraries.operating_system_info
+@my_app.operating_system_info
 ```
 
 Also you can retrieve a list of all your local gems system level libraries dependencies
 and package manager needed to install them using:
 
 ```ruby
-SystemDependencies::SystemLibraries.system_dependencies
+@my_app.system_dependencies
 ```
 
 ## Configurations
